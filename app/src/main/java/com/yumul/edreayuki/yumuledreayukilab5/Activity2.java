@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.util.Log;
 
 public class Activity2 extends AppCompatActivity {
 
@@ -12,6 +13,7 @@ public class Activity2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_2);
+        Log.d("4ITF", "onCreate has executed");
     }
 
     public void process2 (View v){
@@ -19,6 +21,7 @@ public class Activity2 extends AppCompatActivity {
         if(v.getId()==R.id.btnAct1){
             i = new Intent (this, MainActivity.class);
             startActivity(i);
+            Log.d("4ITF", "Act1 (process2) has executed");
         }
     }
 
@@ -28,5 +31,6 @@ public class Activity2 extends AppCompatActivity {
         String title = "Select application";
         Intent chooser = Intent.createChooser(mapIntent, title);
         startActivity(chooser);
+        Log.d("4ITF", "Chooser has executed");
     }
 }
