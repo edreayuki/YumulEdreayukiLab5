@@ -23,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void map1 (View v){
-        Uri location = Uri.parse("geo:14.583709,121.057225");
-        Intent mapIntent = new Intent(Intent.ACTION_SEND, location);
+        Uri location = Uri.parse("geo:14.570447,120.985774");
+        Intent mapIntent = new Intent(Intent.ACTION_VIEW, location);
         String title = "Select application";
         Intent chooser = Intent.createChooser(mapIntent, title);
         startActivity(chooser);
